@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
+    list-style: none;
 }
 
 body {
@@ -16,6 +17,19 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
+}
+nav{
+    height:25px;
+    width:100%;
+}
+label.logo{
+    color:black;
+    font-size:15px;
+    line-height:25px;
+    padding:0 10px;
+    font-weight: bold;
+
+
 }
 
 h1, h2, h3 {
@@ -49,34 +63,54 @@ header {
     z-index: 100;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    
+    float:right;
+    margin-right: 20px;
 }
 
 nav ul li {
-    margin: 0 1.5rem;
+    
+    display:inline-block;
+    line-height: 5px;
+    margin: 0 5px;
 }
 
 nav ul li a {
     color: white;
+    padding: 7px 13px;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 17px;
+    border-radius: 3px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s, transform 0.3s ease;
+}
+a.active, a:hover{
+    transition: .5s;
+
+
 }
 
 nav ul li a:hover {
     color: #f0f0f0;
     transform: scale(1.1);
-    
+    transition: .5s;
+    border-radius: 3px;
+
+}
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+
 }
 
 /* About Section */
@@ -297,14 +331,22 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left:50px;
+    }
     .container {
         width: 100%;
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
     }
 
-    nav ul {
+    nav ul li a{
+        font-size: 16px;
         flex-direction: column;
         gap: 1rem;
+        width:100%;
     }
 
     .social-links {
@@ -337,5 +379,39 @@ footer {
     form input, form textarea {
         padding: 0.8rem;
         font-size: 1rem;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        top:50px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+
+
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+
+    
+    }
+    #check:checked ~ ul{
+        left: 0;
     }
 }
