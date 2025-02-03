@@ -13,6 +13,7 @@
 
 <body>
     <header>
+
         <div class="container">
             <h1>Donaboina Hasini</h1>
             <nav>
@@ -161,3 +162,354 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #1f0606;
+    position: relative;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Section */
+header {
+    background-color:gray;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    background-color:lightcyan;
+    padding: 4rem 0;
+    margin-top: 70px; /* to avoid overlap with fixed header */
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #5e25fc;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #6a11cb;
+    transform: scale(1.2);
+}
+
+.resume {
+    background-color: #25bbfc;
+    color: white;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.resume:hover {
+    background-color: #6a11cb;
+    transform: translateY(-5px);
+}
+
+/* Skills Section */
+#Skillssection {
+    padding: 4rem 0;
+    background-color: #dfedfb;
+}
+
+.skillset {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.2rem;
+    list-style: none;
+    font-weight: bold;
+}
+
+.skillset li {
+    background-color: #2575fc;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.skillset li:hover {
+    background-color: #6a11cb;
+    transform: translateY(-5px);
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f2f2f2;
+    padding: 4rem 0;
+}
+
+.project {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+}
+
+.project a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #6a11cb;
+}
+
+/* Internship Section */
+#internshipsection {
+    padding: 4rem 0;
+    background-color: #fdf2f2;
+}
+
+.internship {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.internship p {
+    margin-bottom: 1rem;
+}
+
+.internship strong {
+    font-size: 1.3rem;
+    color: #2575fc;
+}
+
+/* Certificates Section */
+#certificatesection {
+    padding: 4rem 0;
+    background-color: #e2e2e2;
+}
+
+.certificates-list {
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.certificates-list li {
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.certificates-list li:hover {
+    transform: scale(1.05);
+}
+
+.certificates-list a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.certificates-list a:hover {
+    color: #6a11cb;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+form input, form textarea {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2575fc;
+}
+
+form button {
+    background-color: #25cafc;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2111cb;
+    transform: translateY(-5px);
+}
+
+/* Footer Section */
+footer {
+    background-color:gray;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .skillset {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .certificates-list {
+        font-size: 1rem;
+    }
+
+    .project {
+        padding: 1.5rem;
+    }
+
+    .project a {
+        font-size: 1rem;
+    }
+
+    .resume {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    form input, form textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
