@@ -128,7 +128,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Donaboina VS Hasini. All rights reserved.</p>
+            <p style="color:black;">&copy; 2025 Donaboina VS Hasini. All rights reserved.</p>
         </div>
     </footer>
 
