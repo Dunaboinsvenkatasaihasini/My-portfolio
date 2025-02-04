@@ -8,7 +8,7 @@
 
 /* Body Styling */
 body {
-    background-color: #0f0909;
+    background-color: white;
     color: #333;
 }
 
@@ -28,7 +28,7 @@ header .container {
 nav .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #0f0909;
+    color: white;
 }
 
 nav ul {
