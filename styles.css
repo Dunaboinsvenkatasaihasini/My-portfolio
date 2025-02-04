@@ -8,14 +8,14 @@
 
 /* Body Styling */
 body {
-    background-color: #f4f4f4;
+    background-color: #0f0909;
     color: #333;
 }
 
 /* Header */
 header {
     background-color: #333;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px 0;
 }
 
@@ -280,6 +280,7 @@ footer p {
     }
 
     footer p {
+        text-decoration-color: #333;
         font-size: 0.8rem;
     }
 }
