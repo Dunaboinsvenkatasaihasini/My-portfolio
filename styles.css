@@ -9,13 +9,13 @@
 /* Body Styling */
 body {
     background-color: cornsilk;
-    color:black;
+    color:grey;
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: rgb(255, 255, 255);
+    background-color:#333;
+    color: white;
     padding: 20px 0;
 }
 
@@ -281,7 +281,7 @@ footer p {
     }
 
     footer p {
-        text-decoration-color: #333;
+        text-decoration-color:black;
         font-size: 0.8rem;
     }
 }
