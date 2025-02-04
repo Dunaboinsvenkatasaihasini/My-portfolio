@@ -17,7 +17,7 @@
         <div class="container">
             
             <nav>
-                <label class="logo" style="color:black;">Donaboina Hasini</label>
+                <label class="logo" style="color:black;">Donaboina Venkata Sai Hasini</label>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
                 <ul>
