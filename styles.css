@@ -1,196 +1,157 @@
-/* General Reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Body */
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Header */
 header {
-    background-color: #0044cc;
+    background-color: #333;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
-header .logo {
-    font-size: 2rem;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
     font-weight: bold;
-    text-align: center;
 }
 
 nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 15px;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-nav ul li a:hover {
-    color: #ffeb3b;
+nav ul li a:hover, .active {
+    text-decoration: underline;
 }
 
-/* Mobile Hamburger Menu */
+/* Mobile Navigation */
 #check {
     display: none;
 }
 
 .checkbtn {
+    font-size: 2rem;
     display: none;
 }
 
 @media (max-width: 768px) {
-    #check {
-        display: block;
-    }
-
     .checkbtn {
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
         display: block;
-        margin-left: 10px;
     }
 
     nav ul {
         display: none;
         flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
         width: 100%;
-        text-align: center;
-        margin-top: 15px;
     }
 
     nav ul li {
-        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
     }
 
-    #check:checked + nav ul {
-        display: block;
+    #check:checked ~ .checkbtn + ul {
+        display: flex;
     }
 }
 
 /* Section Styling */
 .section {
-    padding: 60px 0;
+    padding: 50px 0;
     text-align: center;
+    background-color: white;
 }
 
-.section h2 {
+.container h2 {
     font-size: 2rem;
-    color: #0044cc;
     margin-bottom: 20px;
 }
 
-.section p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 20px;
+.container p, .container ul, .container .project {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.d-flex {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.d-flex a {
-    background-color: #0044cc;
-    color: white;
-    padding: 10px 20px;
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #333;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
-.d-flex a:hover {
-    background-color: #ffeb3b;
+.social-links a:hover {
+    color: #0077b5;
 }
 
 /* Skills Section */
 .skillset {
-    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .skillset li {
-    font-size: 1.2rem;
-    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* Projects Section */
 .project {
-    background-color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.panel {
+    background-color: #f9f9f9;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-    font-size: 1.8rem;
-    color: #0044cc;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project a {
-    display: inline-block;
-    color: #0044cc;
-    font-size: 1.1rem;
     text-decoration: none;
-    border-bottom: 2px solid #0044cc;
-    padding-bottom: 5px;
-    transition: color 0.3s;
+    color: #0077b5;
+    font-weight: bold;
 }
 
 .project a:hover {
-    color: #ffeb3b;
-    border-color: #ffeb3b;
+    text-decoration: underline;
 }
 
 /* Internship Section */
 .internship p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.internship strong {
-    font-size: 1.3rem;
-    color: #0044cc;
+    margin-bottom: 10px;
 }
 
 /* Certificates Section */
@@ -200,50 +161,33 @@ nav ul li a:hover {
 }
 
 .certificates-list li {
-    font-size: 1.2rem;
-    color: #666;
     margin-bottom: 10px;
 }
 
-.certificates-list li a {
-    color: #0044cc;
-    text-decoration: none;
-}
-
-.certificates-list li a:hover {
-    color: #ffeb3b;
-}
-
 /* Contact Form */
-section#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-section#contact input,
-section#contact textarea {
+form input, form textarea, form button {
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-section#contact button {
-    background-color: #0044cc;
+form button {
+    background-color: #0077b5;
     color: white;
-    font-size: 1.2rem;
-    padding: 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-section#contact button:hover {
-    background-color: #ffeb3b;
+form button:hover {
+    background-color: #005f87;
 }
 
 /* Footer */
@@ -251,92 +195,91 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-/* Media Queries for Responsiveness */
+footer p {
+    font-size: 1rem;
+}
 
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%;
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1.2rem;
     }
 
     nav ul {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .panel p {
+        font-size: 0.9rem;
+    }
+
+    .skillset li {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Devices (Mobile First) */
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 1.4rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .skillset {
         flex-direction: column;
         gap: 10px;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .project h3 {
+        font-size: 1.1rem;
     }
 
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .d-flex {
-        flex-direction: column;
-    }
-
-    .d-flex a {
-        margin-bottom: 15px;
-    }
-
-    .skillset {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skillset li {
-        font-size: 1.2rem;
-    }
-
-    .project {
-        padding: 15px;
-    }
-
-    section#contact form {
-        width: 80%;
-    }
-
-    footer {
+    .panel p {
         font-size: 0.9rem;
     }
 
-    .internship p {
-        font-size: 1rem;
-    }
-
-    .certificates-list li {
-        font-size: 1rem;
+    footer p {
+        font-size: 0.8rem;
     }
 }
-
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-
-    .d-flex {
-        gap: 30px;
-    }
-
-    .skillset {
-        gap: 20px;
-    }
-
-    .project {
-        padding: 20px;
-    }
-
-    .internship p {
-        font-size: 1.1rem;
-    }
-
-    .certificates-list li {
-        font-size: 1.1rem;
-    }
-}
-
