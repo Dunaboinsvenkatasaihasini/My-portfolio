@@ -17,7 +17,7 @@
         <div class="container">
             
             <nav>
-                <label class="logo" style="color:black;">Donaboina VS Hasini</label>
+                <label class="logo" style="color:black;"><h1>Donaboina VS Hasini</h1></label>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
                 <ul>
